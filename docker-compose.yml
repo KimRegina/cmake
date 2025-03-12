@@ -1,0 +1,18 @@
+version: "2.32"
+
+services:
+  dev:
+    build: ./.devcontainer
+    container_name: dev-container
+    volumes:
+      - D:/Developer/Docker/Data/workspace:/workspace
+    command: [ "/bin/bash", "-c", "tail -f /dev/null" ]
+  mysql:
+    image: mysql:9.2.0
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: Imiss520
+    ports:
+      - "3306:3306"
+    volumes:
+      - D:/Developer/Docker/Data/mysql:/var/lib/mysql
