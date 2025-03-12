@@ -6,7 +6,6 @@ services:
     container_name: dev-container
     volumes:
       - D:/Developer/Docker/Data/workspace:/workspace
-    command: [ "/bin/bash", "-c", "tail -f /dev/null" ]
   mysql:
     image: mysql:9.2.0
     container_name: mysql-container
